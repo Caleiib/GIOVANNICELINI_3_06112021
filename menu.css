@@ -127,12 +127,10 @@ footer{
     color: white;
 }
 .footer_grille{
-    margin-top: 1rem;
-    margin-left: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 65%;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
 }
 footer img {
     font-size: 1rem;
@@ -253,7 +251,33 @@ p {
   .far {
     transition: 0.5s;
   }
-
+@media screen and (max-width: 1000px) {
+    .conteneur{
+        border-radius: 0%;
+    }
+    .menuconteneur{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .category {
+        max-width: 100%;
+    }
+    .icone {
+        margin-right: -7rem;
+    }
+}
+@media screen and (max-width: 670px) {
+    .footer_grille{
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+    footer>div:nth-child(1){
+        display: flex;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+    }
+    
+}
 @keyframes apparition {
     100%{
         transform: scale(1);
