@@ -46,14 +46,18 @@ img.lpdg {
     padding-bottom: 6rem;
 }
 .menuconteneur {
+    /* max-width: 33.33%; */
+    justify-content: space-between;
     padding: 0 2rem;
-    column-gap: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 2rem; */
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
     margin-top: 2rem;
+    /* max-width: 33.33%; */
 }
 .conteneur h1 { 
-    margin-left: 2rem; 
+    margin-left: 2rem;
+    font-family: 'Shrikhand', cursive;
 }
 .description {
     overflow-x: hidden;
@@ -97,6 +101,7 @@ img.lpdg {
 }
 .conteneur>div:nth-child(1){
     display: flex;
+    justify-content: space-between;
 }
 .heart {font-size: 2rem;padding-left: 58rem; 
     padding-top: 1.2rem;
@@ -113,6 +118,7 @@ img.lpdg {
     padding-left: 2rem;
     padding-right: 2rem;
     color: white;
+    box-shadow: #cacaca 0px 6px 14px;
 }
 footer{
     margin-top: 3rem;
@@ -168,7 +174,6 @@ i.fas.fa-check {
 }
 
 .description:hover i.fas.fa-check {
-    /* margin-right: 0; */
     transform: rotate(0deg);
     transition: 0.4s ease;
 }
@@ -179,4 +184,78 @@ h3 {
 
 p {
     margin: 0.75rem 0;
+}
+.text > * {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+.category {
+    max-width: 32.33%;
+    width: 100%;
+}
+
+.menuconteneur>.category:nth-child(1) {
+    animation: apparition 0.7s 1 cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+    animation-delay: 0.3s;
+    transform: scale(0);
+}
+
+.menuconteneur>.category:nth-child(2) {
+    animation: apparition 0.7s 1 cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+    animation-delay: 0.5s;
+    transform: scale(0);
+}
+
+.menuconteneur>.category:nth-child(3) {
+    animation: apparition 0.7s 1 cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+    animation-delay: 1s;
+    transform: scale(0);
+    
+}
+
+.containerh{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    grid-area: 1/2/4/3;
+  }
+  .containerh > * {
+    position: absolute;
+    font-size: 2rem;
+  }
+  input {
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .containerh .fas {
+    opacity: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#ff79DA));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    transition: 0.5s;
+  }
+  input:checked ~ .fas{
+    opacity: 1;
+    transition: 0.5s;
+  }
+  input:checked ~ .far{
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .far {
+    transition: 0.5s;
+  }
+
+@keyframes apparition {
+    100%{
+        transform: scale(1);
+    }
 }
