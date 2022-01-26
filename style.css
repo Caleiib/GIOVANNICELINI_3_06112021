@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 footer>div:nth-child(1) {
+    
     margin-bottom: 1rem;
     text-align: center;
     font-family: 'Shrikhand', cursive;
     font-size: 2rem;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body, html {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -46,7 +48,6 @@ body, html {
 .search_bar input{
     border: none;
     background:#eaeaea;
-    font-style: bold;
     font-weight: bold;
     font-size: 0.9rem;
 }
@@ -77,17 +78,28 @@ p {
     padding-top: 1rem;
     padding-bottom: 4rem;
 }
-.button {
-    width: 200px;
-    padding: 1rem;
-    border-radius: 40px;
-    background: linear-gradient(#e772db, #9f5adc);
-    text-align: center;
+.button{
     margin-top: 2rem;
-    box-shadow: #cacaca 0px 6px 14px;
 }
 .button a {
+    cursor: pointer;
+    margin-top: 2rem;
+    font-weight: 500;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    padding: .75rem 1.5rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 6.25rem;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     text-decoration: none;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+.button a:hover{
+    transition-duration: 0.5s;
+    box-shadow: 4px 4px 2px #909090;
+    background-image: linear-gradient(0deg,rgba(255,121,218,.9),rgba(255,153,227,.9));
+
 }
 .button a>span {
     color: white;
@@ -239,13 +251,6 @@ p.New{
     position: absolute;
     font-size: 2rem;
   }
-  input[type="checkbox"] {
-    z-index: 1;
-    appearance: none;
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-  }
   .containerh .fas {
     opacity: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#ff79DA));
@@ -253,11 +258,11 @@ p.New{
     -webkit-text-fill-color:transparent;
     transition: 0.5s;
   }
-  input:checked ~ .fas{
+  .fas:hover{
     opacity: 1;
     transition: 0.5s;
   }
-  input:checked ~ .far{
+  .far:hover{
     opacity: 0;
     transition: 0.5s;
   }
