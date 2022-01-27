@@ -66,6 +66,7 @@ img.lpdg {
     border-radius: 0.6rem;
     display: flex;
     margin-bottom: 1rem;
+    cursor: pointer;
     }
 .description:hover .icone {
     margin: 0;
