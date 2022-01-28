@@ -67,6 +67,7 @@ img.lpdg {
     display: flex;
     margin-bottom: 1rem;
     cursor: pointer;
+    box-shadow: 0.3rem 0.3rem 10px rgb(0 0 0 / 13%)
     }
 .description:hover .icone {
     margin: 0;
@@ -257,6 +258,9 @@ p {
     .conteneur{
         border-radius: 0%;
     }
+    .price{
+    margin-right: 1rem;
+}
     .menuconteneur{
         flex-direction: column;
         max-width: 100%;
